@@ -11,6 +11,7 @@ if (customElements.get('v-badge')) {
   console.warn('WARNING: Multiple instances of PRIME being imported.');
 } else {
   loadFonts().catch(error => console.error(error));
+  console.log('HI THERE')
 
   import('./elements/badge.svelte');
   import('./elements/breadcrumbs.svelte');
