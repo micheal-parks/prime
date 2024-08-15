@@ -1,0 +1,32 @@
+---
+title: Tabs
+---
+
+import TabsComponent from '../../../components/tabs.svelte';
+import Example from '../../../components/example.svelte';
+
+- A clickable element that allows the user to navigate to another page or area.
+
+```ts
+import { Tabs } from '@viamrobotics/prime-core';
+```
+
+<Example>
+  <TabsComponent
+    slot="component"
+    client:load
+  />
+  ```svelte
+  <div class="flex w-full flex-col gap-4">
+    <Tabs
+      cx="bg-cyan-500 w-full"
+      tabs={['Tab 1', 'Tab 2', 'Tab 3']}
+      selected={tab}
+      on:input={(event) => {
+        tab = event.detail.value;
+      }}
+    />
+    <p>Hello From {tab}!</p>
+  </div>
+  ```
+</Example>
